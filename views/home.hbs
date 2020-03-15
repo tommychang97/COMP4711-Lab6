@@ -1,0 +1,49 @@
+<div id = "menuBar">
+    <ul id = "menuList">
+        <li>
+            <form action = "/" method = "get">
+            <button type = "submit" id = "logout">LOGOUT</button>
+            </form>
+        </li>
+    </ul>
+</div>
+<div class = "flex-wrapper" id = "container">
+            <div id = "header">
+                <p id = "HeaderTitle">Artist Directory</p>
+                <form action = "/search" method = "get">
+                    <input id = "search" type = "text" name = "search">
+                    <button id = "AddArtistButton" class = "HeaderButtons" type = "button" onclick = 'showForm()'>Add</button>
+                    <button id = "SearchButton" class = "HeaderButtons" type = "submit">Search</button>
+                </form>
+            </div>
+            <div id = "AddArtistForm">
+                <form method ="post" action = "../add">
+                <input id = "ArtistName" placeholder = "Artist Name" type = "text" maxlength = "40"
+                    name = "name">
+                <input id = "ArtistDescription" placeholder = "About artist"type = "text" maxlength = "40"
+                    name = "description">
+                <input id = "Image url" placeholder = "Image url" type = "text"
+                    name ="image">
+                    <button id = "Add" type = "submit">Add</button>
+                </form>
+            </div>
+            {{#each artists}}
+                <div class = "artistDiv" id = {{this.id}}>
+                    <div class = "ImageDiv">
+                        <img src = {{this.image}}>
+                    </div>
+                    <div class = "ButtonDiv">
+                        <form action = "/delete/{{this.id}}" method = "POST">
+                        <button type = "submit">Delete</button>
+                        </form>
+                    </div>
+                    <div class = "DescriptionDiv">
+                        <p class = "title">
+                            {{this.name}}
+                        </p>
+                        <br/>
+                        <p>{{this.description}}</p>
+                    </div>
+                </div>
+            {{/each}}
+</div>

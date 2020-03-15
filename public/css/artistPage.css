@@ -1,0 +1,126 @@
+.flex-wrapper {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+#header {
+    height:70px;
+    width:500px;
+    padding:10px 25px 50px 25px;
+    text-align:left;
+    font-family: 'Oswald', sans-serif;
+    font-weight:bold;
+    font-size: 20px;
+}
+
+.ImageDiv {
+    width:20%;
+    float:left;
+}
+.DescriptionDiv {
+    width:60%;
+    float:left;
+    font-family: 'Source Sans Pro', sans-serif;
+    word-break: break-all;  
+    white-space:normal;
+}
+
+.ButtonDiv {
+    width:20%;
+    height:100%;
+    float:right;
+    border:none;
+    background:none;
+}
+
+.ButtonDiv button {
+    height:30px;  
+    position:relative;
+    top:20%; 
+    border-style:solid;
+    background-color:red;
+}
+.DescriptionDiv p {
+    float:left;
+    margin-top:-3px;
+    text-align:left;
+    font-size: 14px;
+}
+.DescriptionDiv .title {
+    font-weight: bold;
+    margin-bottom:0px;
+    font-size:15px;
+}
+.ImageDiv img {
+    float:left;
+    width:50px;
+    height:50px;
+}
+.flex-wrapper > div{
+    text-align:center;
+    width: 350px;
+    height: 55px;
+    border-style: solid;
+    border-width: 0.5px;
+    border-color: lightgrey;
+    padding: 15px;
+}
+
+.flex-wrapper > div:hover:nth-child(n+3) {
+    background-color:#F7F7F7;
+}
+#search {
+    width: 78%;
+    height: 20px;
+    /* border-color: #FAFAFA;*/
+    /*border-radius: 3px; */
+}
+
+.HeaderButtons{
+    background-color:grey;
+    border-color:grey;
+    border-style:solid;
+    padding:5px;
+}
+
+#AddArtistForm {
+    width: 330px;
+    height: 120px;
+    padding:0;
+    border-width:0;
+    display: none;
+} 
+#AddArtistForm input {
+    text-align:center;
+    width:100%;
+    box-sizing: border-box;
+    height:25px;
+} 
+
+#Add {
+    width:120px;
+    height:30px;
+    background-color:grey;
+    border-color:grey;
+    border-style:solid;
+}
+
+#menuBar {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    list-style-type: none;
+    text-align: center;
+    height: 40px;
+    width:100%;
+    background-color:rgb(223, 153, 50);
+    margin-bottom: 20px;
+}
+
+#logout {
+    font-family: 'Oswald', sans-serif;
+    background-color:lightblue;
+}
+#menuList li {
+    display:inline;
+}

@@ -1,0 +1,10 @@
+const express = require('express');
+const artistController = require('../controllers/artistController');
+const loginController = require('../controllers/loginController');
+const router = express.Router();
+router.get('/', loginController.getLoginPage);
+router.post('/artists', loginController.getArtistsPage);
+router.post('/add', artistController.addArtist);
+router.post('/delete/:id', artistController.deleteArtist);
+router.get('/search', artistController.getSearchedArtists);
+module.exports = router;

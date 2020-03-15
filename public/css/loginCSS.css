@@ -1,0 +1,38 @@
+
+#loginWrapper { 
+    font-family: 'Oswald', sans-serif;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+
+#login {
+    background-color:lightgrey;
+    padding:30px;
+    padding-top:40px;
+    border: 3px solid #f1f1f1;
+    width: 450px;
+    height: 190px;
+    display: inline-block;
+    text-align:center;
+}
+
+input {
+  text-align:left;
+  padding-left:20px;
+  border: 1px solid #a1a3a3;
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 45px;
+  margin: 5px;
+  margin-top:0px;
+  width: 350px;
+}
+
+input[type=submit] {
+    margin-top:15px;
+    text-align:center;
+    padding:0;
+    background-color:rgb(216, 161, 10);
+}
